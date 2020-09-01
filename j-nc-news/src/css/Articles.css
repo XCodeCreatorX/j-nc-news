@@ -1,0 +1,8 @@
+.articlesContainer {
+  text-align: center;
+}
+
+.articleListItem {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
