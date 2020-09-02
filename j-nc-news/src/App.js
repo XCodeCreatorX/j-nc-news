@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 
 import "./css/Home.css";
 import "./css/Articles.css";
-import "./css/Articles.css";
+import "./css/chosenArticles.css";
 
 import Home from "./components/home";
 import AllArticles from "./components/articles";
