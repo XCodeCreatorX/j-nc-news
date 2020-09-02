@@ -1,4 +1,5 @@
 import React from "react";
+import Axios from "axios"
 import { Link } from "@reach/router";
 
 class Articles extends React.Component {
@@ -6,18 +7,18 @@ class Articles extends React.Component {
     articles: [],
   };
 
-  getArticles = () => {
-    fetch("https://j-nc-news.herokuapp.com/api/articles")
-      .then((response) => response.json())
-      .then((articlesArr) => {
+  getAllArticles() {
+    Axios.get("https://j-nc-news.herokuapp.com/api/articles").then(
+      (articlesArr) => {
         this.setState(() => {
-          return { articles: articlesArr.articles };
+          return { articles: articlesArr.data.articles };
         });
-      });
-  };
+      }
+    );
+  }
 
   componentDidMount() {
-    this.getArticles();
+    this.getAllArticles();
   }
 
   render() {
@@ -26,11 +27,11 @@ class Articles extends React.Component {
         <h1>All Articles</h1>
 
         {this.state.articles.map((article) => {
-          return <div className="articleContainer">
+          return <div className="articleContainer" key={article.article_id}>
             <p>Title: {article.title}</p>
             <p>Author: {article.author}</p> 
             <p>Votes: {article.votes}</p> 
-            <Link to="/chosenArticle"><button className="viewArticleButton" article={this.state.articles}>View Article</button></Link>
+            <Link to={`${article.article_id}`}><button className="viewArticleButton">View Article</button></Link>
           </div>
         })}
 

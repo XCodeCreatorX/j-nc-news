@@ -15,7 +15,7 @@ function homePage() {
       <Router>
         <Home path="/" />
         <AllArticles path="/articles"/>
-        <ChosenArticle path="/chosenArticle"/>
+        <ChosenArticle path="/articles/:article_id"/>
       </Router>
     </div>
   );

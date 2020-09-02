@@ -1,20 +1,25 @@
 import React from "react";
+import Axios from "axios";
 
-class chosenArticles extends React.Component {
-  state = {
-    chosenArticle: []
-  }
+const chosenArticles = (props) => {
+  const articleID = props.article_id;
 
-  render() {
-    
+  const getArticle = () => {
+    return Axios.get(`https://j-nc-news.herokuapp.com/api/articles/${articleID}`)
+  };
 
-    return(
-      <div className="articleContainer">
-        <h3>Hello</h3>
-      </div>
-      
-    )
-  }
-}
+  const componentDidMount = () => {
+    getArticle()
+  };
+
+  componentDidMount();
+
+  return (
+    <div className="articleContainer">
+      <h3>Hello</h3>
+      {console.log()}
+    </div>
+  );
+};
 
 export default chosenArticles;
