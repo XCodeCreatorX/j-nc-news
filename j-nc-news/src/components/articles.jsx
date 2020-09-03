@@ -1,6 +1,7 @@
 import React from "react";
 import Axios from "axios"
 import { Link } from "@reach/router";
+import Title from "./home"
 
 class Articles extends React.Component {
   state = {
@@ -23,7 +24,9 @@ class Articles extends React.Component {
   render() {
     return (
       <div className="articlesContainer">
+        <Title/>
         <h1>All Articles</h1>
+
 
         {this.state.articles.map((article) => {
           return <div className="articleContainer" key={article.article_id}>

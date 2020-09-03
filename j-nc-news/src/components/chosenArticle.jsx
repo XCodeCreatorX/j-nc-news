@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import Comments from "./comments"
 
 class ChosenArticles extends React.Component {
   state = {
@@ -37,6 +38,7 @@ class ChosenArticles extends React.Component {
 
         <h5>Votes: {this.state.article.votes}</h5>
         <h5>Comments: {this.state.article.comment_count}</h5>
+        <Comments articleID={this.props.article_id}/>
 
       </div>
     )

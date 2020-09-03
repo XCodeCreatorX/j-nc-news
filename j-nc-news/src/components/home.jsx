@@ -18,6 +18,11 @@ class Title extends React.Component {
               <p>Articles</p>
             </Link>
           </li>
+          <li className="navItem">
+            <Link to="/topics">
+              <p>Topics</p>
+            </Link>
+          </li>
         </ul>
       </div>
     );
