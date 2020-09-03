@@ -2,14 +2,14 @@
   text-align: center;
 }
 
-a {
+.topicContainer h3 {
   display: block;
   color: black;
   background-color: white;
   text-decoration: none;
-  margin-bottom: 50px;
 }
 
-a:hover {
+.topicContainer h3:hover {
   color: red;
+  cursor: pointer;
 }

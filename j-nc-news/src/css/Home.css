@@ -20,4 +20,5 @@
 
 .navItem a:hover {
   color: red;
+  cursor: pointer;
 }

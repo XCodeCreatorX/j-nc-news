@@ -31,7 +31,7 @@ class Topics extends React.Component {
         {this.state.topics.map((topic) => {
           return (
             <div className="topicContainer">
-              <a id={topic.slug}>{topic.slug}</a>
+              <h3 id={topic.slug}>{topic.slug}</h3>
             </div>
           );
         })}
