@@ -9,7 +9,7 @@ class Articles extends React.Component {
   };
 
   getAllArticles() {
-    Axios.get("https://j-nc-news.herokuapp.com/api/articles")
+    return Axios.get("https://j-nc-news.herokuapp.com/api/articles")
     .then((articlesArr) => {this.setState(() => {
           return { articles: articlesArr.data.articles };
         });
