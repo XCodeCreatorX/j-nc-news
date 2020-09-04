@@ -30,7 +30,6 @@ class Articles extends React.Component {
       <div className="articlesContainer">
         <Title />
 
-
         {this.state.articles.map((article) => {
           if (article.topic === chosenTopic) {
             return <div className={article.title} key={article.title}>
@@ -39,7 +38,6 @@ class Articles extends React.Component {
               <Link to={`/articles/${article.article_id}`}><button className="viewArticleButton">View Article</button></Link>
             </div>
           }
-
         })}
 
         <br></br>

@@ -1,6 +1,8 @@
 import React from "react";
 import Axios from "axios";
 import Comments from "./comments"
+import Title from "./home"
+
 
 class ChosenArticles extends React.Component {
   state = {
@@ -26,6 +28,7 @@ class ChosenArticles extends React.Component {
   render() {
     return (
       <div className="articleContainer">
+        <Title />
         <h1>{this.state.article.title}</h1>
         <h2>{this.state.article.author}</h2>
 
