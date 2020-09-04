@@ -22,11 +22,12 @@ class Articles extends React.Component {
     this.getAllArticles();
   }
 
-  // getSorted(event) {
-  //   console.dir(event)
+  getSorted(event) {
+    const target = event.target.innerHTML
+    console.log(target)
 
-  //Get the text --> Sort by the text/query, using the state.
-  // }
+    
+  }
 
   render() {
     return (
@@ -37,9 +38,9 @@ class Articles extends React.Component {
         <div className="dropDown">
           <h4 className="dropBtn">Sort Articles By:</h4>
           <div className="dropdownContent">
-            <a onClick={this.getSorted}>Date Created</a>
-            <a onClick={this.getSorted}>Comment Count</a>
-            <a onClick={this.getSorted}>Votes</a>
+            <a className="sortBy" onClick={this.getSorted}>Date Created</a>
+            <a className="sortBy" onClick={this.getSorted}>Comment Count</a>
+            <a className="sortBy" onClick={this.getSorted}>Votes</a>
           </div>
         </div>
 
