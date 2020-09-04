@@ -11,6 +11,7 @@ import Home from "./components/home";
 import AllArticles from "./components/articles";
 import ChosenArticle from "./components/chosenArticle"
 import Topics from "./components/topics"
+import ChosenTopic from "./components/chosenTopic"
 
 function homePage() {
   return (
@@ -20,6 +21,7 @@ function homePage() {
         <AllArticles path="/articles"/>
         <ChosenArticle path="/articles/:article_id"/>
         <Topics path="/topics"/>
+        <ChosenTopic path="/topics/:chosen_topic"/>
       </Router>
     </div>
   );

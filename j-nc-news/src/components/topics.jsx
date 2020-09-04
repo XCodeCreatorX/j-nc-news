@@ -1,5 +1,7 @@
 import React from "react";
 import Axios from "axios";
+import { Link } from "@reach/router";
+
 
 import Title from "./home";
 
@@ -31,7 +33,7 @@ class Topics extends React.Component {
         {this.state.topics.map((topic) => {
           return (
             <div className="topicContainer">
-              <h3 id={topic.slug}>{topic.slug}</h3>
+              <Link to={topic.slug}><h3 id={topic.slug}>{topic.slug}</h3></Link>
             </div>
           );
         })}
